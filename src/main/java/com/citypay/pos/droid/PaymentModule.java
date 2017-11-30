@@ -38,7 +38,7 @@ public class PaymentModule extends Module {
         dest.setDescription(response.getDescription());
         return dest;
     }
-//    private com.citypay.pos.kinetic.model
+
 
 
     /**

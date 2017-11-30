@@ -10,8 +10,7 @@ public class Device implements Serializable {
     private static final long serialVersionUID = 1L;
 
     private String name;
-    private ConnectionType connectionType;
-    private String driver;
+    private DeviceDriver driver;
     private String address;
     private long lastSaved;
 
@@ -24,18 +23,14 @@ public class Device implements Serializable {
     }
 
     public ConnectionType getConnectionType() {
-        return connectionType;
+        return driver.getConnectionType();
     }
 
-    public void setConnectionType(ConnectionType connectionType) {
-        this.connectionType = connectionType;
-    }
-
-    public String getDriver() {
+    public DeviceDriver getDriver() {
         return driver;
     }
 
-    public void setDriver(String driver) {
+    public void setDriver(DeviceDriver driver) {
         this.driver = driver;
     }
 
@@ -63,7 +58,6 @@ public class Device implements Serializable {
         Device device = (Device) o;
 
         if (!name.equals(device.name)) return false;
-        if (connectionType != device.connectionType) return false;
         if (!driver.equals(device.driver)) return false;
         return address.equals(device.address);
     }
@@ -71,7 +65,6 @@ public class Device implements Serializable {
     @Override
     public int hashCode() {
         int result = name.hashCode();
-        result = 31 * result + connectionType.hashCode();
         result = 31 * result + driver.hashCode();
         result = 31 * result + address.hashCode();
         return result;

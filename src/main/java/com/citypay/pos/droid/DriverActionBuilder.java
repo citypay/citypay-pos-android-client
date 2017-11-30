@@ -1,5 +1,7 @@
 package com.citypay.pos.droid;
 
+import io.swagger.client.ApiException;
+
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -21,8 +23,8 @@ class DriverActionBuilder {
     private DriverActionBuilder() {
     }
 
-    DriverActionBuilder with(String driver, Consumer<Device> consumer) {
-        _map.put(driver, consumer);
+    DriverActionBuilder with(String driver, Consumer<Device> action) {
+        _map.put(driver, action);
         return this;
     }
 

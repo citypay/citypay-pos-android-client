@@ -25,7 +25,7 @@ public abstract class Module {
         }
     }
 
-    protected void preconditionCheckListener(Response.Listener<?> listener) {
+    void preconditionCheckListener(Response.Listener<?> listener) {
         preconditionCheck(listener, "Response listener not provided");
     }
 
