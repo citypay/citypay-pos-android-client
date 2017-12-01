@@ -27,7 +27,7 @@ public class SharedPreferencesDeviceManager extends HashMapDeviceManager {
     }
 
     private void load() {
-        String deviceValue = prefs.getString(PREFERENCE_KEY, "[]");
+        String deviceValue = prefs.getString(PREFERENCE_KEY, "{}");
         DeviceArray deviceArray = extract(deviceValue);
         // add to hash map of the super device manager
         for (Device device : deviceArray.getDevices()) {
