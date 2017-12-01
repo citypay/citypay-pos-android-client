@@ -69,4 +69,9 @@ public class Device implements Serializable {
         result = 31 * result + address.hashCode();
         return result;
     }
+
+    @Override
+    public String toString() {
+        return name;
+    }
 }
