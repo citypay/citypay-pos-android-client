@@ -31,7 +31,7 @@ public class HashMapDeviceManager implements DeviceManager {
     public Device delete(String name) {
         Device device = find(name);
         if (device != null) {
-            map.remove(device);
+            map.remove(name);
         }
         return device;
     }
