@@ -92,9 +92,9 @@ public abstract class Module {
             errorListener.onErrorResponse(new VolleyError("Device not found"));
         } else {
             if (actions != null && actions.size() > 0) {
-                for (Map.Entry<String, Consumer<Device>> entry : actions.entrySet()) {
-                    if (entry.getKey().equals(device.getDriver())) {
-                        entry.getValue().accept(device);
+                for (Map.Entry<String, Consumer<Device>> actionEntry : actions.entrySet()) {
+                    if (device.getDriver() != null && actionEntry.getKey().equals(device.getDriver().getName())) {
+                        actionEntry.getValue().accept(device);
                         return;
                     }
                 }
