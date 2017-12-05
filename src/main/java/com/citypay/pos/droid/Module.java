@@ -1,5 +1,7 @@
 package com.citypay.pos.droid;
 
+import android.annotation.TargetApi;
+import android.util.Base64;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.citypay.pos.kinetic.api.DeviceApi;
@@ -11,6 +13,7 @@ import java.util.function.Consumer;
 /**
  * An abstraction of a module used in the pos api to obtain and use devices.
  */
+@TargetApi(8)
 public abstract class Module {
 
     private final DeviceManager deviceManager;
@@ -37,6 +40,13 @@ public abstract class Module {
         preconditionCheck(device, "Device cannot be null");
         DeviceApi api = new DeviceApi();
         api.setBasePath(device.getAddress());
+
+        if (device.getAuthenticationType() == AuthenticationType.Basic) {
+            api.addHeader("Authorization", "Basic " + Base64.encodeToString(
+                    String.format("%s:%s", device.getUsername(), device.getPassword()).getBytes(), Base64.DEFAULT
+            ));
+        }
+
         return api;
     }
 
@@ -44,6 +54,11 @@ public abstract class Module {
         preconditionCheck(device, "Device cannot be null");
         PaymentApi paymentApi = new PaymentApi();
         paymentApi.setBasePath(device.getAddress());
+        if (device.getAuthenticationType() == AuthenticationType.Basic) {
+            paymentApi.addHeader("Authorization", "Basic " + Base64.encodeToString(
+                    String.format("%s:%s", device.getUsername(), device.getPassword()).getBytes(), Base64.DEFAULT
+            ));
+        }
         return paymentApi;
     }
 

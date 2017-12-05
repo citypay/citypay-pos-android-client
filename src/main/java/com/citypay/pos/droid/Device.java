@@ -15,6 +15,7 @@ public class Device implements Serializable {
     private String username;
     private String password;
     private long lastSaved;
+    private AuthenticationType authenticationType;
 
     public String getName() {
         return name;
@@ -50,6 +51,14 @@ public class Device implements Serializable {
 
     public void setLastSaved(long lastSaved) {
         this.lastSaved = lastSaved;
+    }
+
+    public AuthenticationType getAuthenticationType() {
+        return authenticationType;
+    }
+
+    public void setAuthenticationType(AuthenticationType authenticationType) {
+        this.authenticationType = authenticationType;
     }
 
     public String getUsername() {
