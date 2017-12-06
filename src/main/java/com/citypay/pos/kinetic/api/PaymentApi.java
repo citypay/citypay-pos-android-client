@@ -93,7 +93,7 @@ public class PaymentApi {
       // normal form params
     }
 
-    String[] authNames = new String[] { "BasicAuth" };
+    String[] authNames = new String[] {  };
 
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
@@ -156,7 +156,7 @@ public class PaymentApi {
       // normal form params
           }
 
-    String[] authNames = new String[] { "BasicAuth" };
+    String[] authNames = new String[] {  };
 
     try {
       apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames,
@@ -216,7 +216,7 @@ public class PaymentApi {
       // normal form params
     }
 
-    String[] authNames = new String[] { "BasicAuth" };
+    String[] authNames = new String[] {  };
 
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
@@ -284,7 +284,7 @@ public class PaymentApi {
       // normal form params
           }
 
-    String[] authNames = new String[] { "BasicAuth" };
+    String[] authNames = new String[] {  };
 
     try {
       apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames,
@@ -344,7 +344,7 @@ public class PaymentApi {
       // normal form params
     }
 
-    String[] authNames = new String[] { "BasicAuth" };
+    String[] authNames = new String[] {  };
 
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
@@ -412,7 +412,7 @@ public class PaymentApi {
       // normal form params
           }
 
-    String[] authNames = new String[] { "BasicAuth" };
+    String[] authNames = new String[] {  };
 
     try {
       apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames,
@@ -472,7 +472,7 @@ public class PaymentApi {
       // normal form params
     }
 
-    String[] authNames = new String[] { "BasicAuth" };
+    String[] authNames = new String[] {  };
 
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
@@ -540,7 +540,7 @@ public class PaymentApi {
       // normal form params
           }
 
-    String[] authNames = new String[] { "BasicAuth" };
+    String[] authNames = new String[] {  };
 
     try {
       apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames,
@@ -600,7 +600,7 @@ public class PaymentApi {
       // normal form params
     }
 
-    String[] authNames = new String[] { "BasicAuth" };
+    String[] authNames = new String[] {  };
 
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames);
@@ -668,7 +668,7 @@ public class PaymentApi {
       // normal form params
           }
 
-    String[] authNames = new String[] { "BasicAuth" };
+    String[] authNames = new String[] {  };
 
     try {
       apiInvoker.invokeAPI(basePath, path, "POST", queryParams, postBody, headerParams, formParams, contentType, authNames,
