@@ -12,6 +12,7 @@
 
 package io.swagger.client;
 
+import android.annotation.TargetApi;
 import com.android.volley.Cache;
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Network;
@@ -55,6 +56,7 @@ import io.swagger.client.request.PutRequest;
 import io.swagger.client.request.DeleteRequest;
 import io.swagger.client.request.PatchRequest;
 
+@TargetApi(11)
 public class ApiInvoker {
   private static ApiInvoker INSTANCE;
   private Map<String, String> defaultHeaderMap = new HashMap<String, String>();

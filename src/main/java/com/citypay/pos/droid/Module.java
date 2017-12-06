@@ -55,10 +55,13 @@ public abstract class Module {
         PaymentApi paymentApi = new PaymentApi();
         paymentApi.setBasePath(device.getAddress());
         if (device.getAuthenticationType() == AuthenticationType.Basic) {
-            paymentApi.addHeader("Authorization", "Basic " + Base64.encodeToString(
-                    String.format("%s:%s", device.getUsername(), device.getPassword()).getBytes(), Base64.DEFAULT
-            ));
+//            paymentApi.addHeader("Authorization", "Basic " + Base64.encodeToString(
+//                    String.format("%s:%s", device.getUsername(), device.getPassword()).getBytes(), Base64.DEFAULT
+//            ));
+            paymentApi.getInvoker().setUsername(device.getUsername());
+            paymentApi.getInvoker().setPassword(device.getPassword());
         }
+
         return paymentApi;
     }
 

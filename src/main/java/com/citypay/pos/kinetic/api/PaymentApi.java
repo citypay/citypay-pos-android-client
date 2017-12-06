@@ -121,7 +121,7 @@ public class PaymentApi {
 
       /**
    * When this instruction is sent, the reconciliation process will be started and the transactions for the day closed. Important, no confirmation is prompted on the device.
-   * 
+   *
 
   */
   public void closeJsonPost (final Response.Listener<CloseResponse> responseListener, final Response.ErrorListener errorListener) {
@@ -141,14 +141,14 @@ public class PaymentApi {
 
 
     String[] contentTypes = {
-      
+
     };
     String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
 
     if (contentType.startsWith("multipart/form-data")) {
       // file uploading
       MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
-      
+
 
       HttpEntity httpEntity = localVarBuilder.build();
       postBody = httpEntity;
@@ -181,8 +181,8 @@ public class PaymentApi {
   }
   /**
   * Reprint a merchant or customer receipt for a transaction that exists on the device (i.e. has not been cleared by End of Day process).
-  * 
-   * @param body 
+  *
+   * @param body
    * @return SuccessResponse
   */
   public SuccessResponse printJsonPost (PrintRequest body) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
@@ -244,8 +244,8 @@ public class PaymentApi {
 
       /**
    * Reprint a merchant or customer receipt for a transaction that exists on the device (i.e. has not been cleared by End of Day process).
-   * 
-   * @param body 
+   *
+   * @param body
   */
   public void printJsonPost (PrintRequest body, final Response.Listener<SuccessResponse> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = body;
@@ -276,7 +276,7 @@ public class PaymentApi {
     if (contentType.startsWith("multipart/form-data")) {
       // file uploading
       MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
-      
+
 
       HttpEntity httpEntity = localVarBuilder.build();
       postBody = httpEntity;
@@ -309,8 +309,8 @@ public class PaymentApi {
   }
   /**
   * Initiate a refund transaction on the device.
-  * 
-   * @param body 
+  *
+   * @param body
    * @return SaleResponse
   */
   public SaleResponse refundJsonPost (SaleRequest body) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
@@ -372,8 +372,8 @@ public class PaymentApi {
 
       /**
    * Initiate a refund transaction on the device.
-   * 
-   * @param body 
+   *
+   * @param body
   */
   public void refundJsonPost (SaleRequest body, final Response.Listener<SaleResponse> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = body;
@@ -404,7 +404,7 @@ public class PaymentApi {
     if (contentType.startsWith("multipart/form-data")) {
       // file uploading
       MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
-      
+
 
       HttpEntity httpEntity = localVarBuilder.build();
       postBody = httpEntity;
@@ -437,8 +437,8 @@ public class PaymentApi {
   }
   /**
   * Initiate a reversal on the device.
-  * 
-   * @param body 
+  *
+   * @param body
    * @return SaleResponse
   */
   public SaleResponse reversalJsonPost (ReversalRequest body) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
@@ -500,8 +500,8 @@ public class PaymentApi {
 
       /**
    * Initiate a reversal on the device.
-   * 
-   * @param body 
+   *
+   * @param body
   */
   public void reversalJsonPost (ReversalRequest body, final Response.Listener<SaleResponse> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = body;
@@ -532,7 +532,7 @@ public class PaymentApi {
     if (contentType.startsWith("multipart/form-data")) {
       // file uploading
       MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
-      
+
 
       HttpEntity httpEntity = localVarBuilder.build();
       postBody = httpEntity;
@@ -565,8 +565,8 @@ public class PaymentApi {
   }
   /**
   * Initiate a sale transaction on the device.
-  * 
-   * @param body 
+  *
+   * @param body
    * @return SaleResponse
   */
   public SaleResponse saleJsonPost (SaleRequest body) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
@@ -628,8 +628,8 @@ public class PaymentApi {
 
       /**
    * Initiate a sale transaction on the device.
-   * 
-   * @param body 
+   *
+   * @param body
   */
   public void saleJsonPost (SaleRequest body, final Response.Listener<SaleResponse> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = body;
@@ -660,7 +660,7 @@ public class PaymentApi {
     if (contentType.startsWith("multipart/form-data")) {
       // file uploading
       MultipartEntityBuilder localVarBuilder = MultipartEntityBuilder.create();
-      
+
 
       HttpEntity httpEntity = localVarBuilder.build();
       postBody = httpEntity;
