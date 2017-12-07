@@ -53,7 +53,9 @@ public class PaymentModule extends Module {
         preconditionCheckListener(responseListener);
 
         _withDevice(body.getDevice(), errorListener, DriverActionBuilder.newBuilder()
-                .with(KINETIC_DRIVER, device -> initKineticPaymentApi(device).saleJsonPost(adapt(body), this::adapt, errorListener))
+                .with(KINETIC_DRIVER, device -> initKineticPaymentApi(device).saleJsonPost(adapt(body), saleResponse -> {
+                    responseListener.onResponse(adapt(saleResponse));
+                }, errorListener))
         );
 
     }
