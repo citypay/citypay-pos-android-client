@@ -459,7 +459,7 @@ public class ApiInvoker {
           if (body instanceof HttpEntity) {
           request = new PostRequest(url, headers, null, (HttpEntity) body, stringRequest, errorListener);
           } else {
-             request = new PostRequest(url, headers, contentType, new StringEntity(serialize(body), "UTF-8"), stringRequest, errorListener);
+             request = new PostRequest(url, headers, contentType, new StringEntity(serialize(body), ContentType.APPLICATION_JSON), stringRequest, errorListener);
           }
        } else {
          request = new PostRequest(url, headers, null, null, stringRequest, errorListener);
